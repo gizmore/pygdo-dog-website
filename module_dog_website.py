@@ -8,3 +8,12 @@ class module_dog_website(GDO_Module):
 
     def gdo_is_site_module(self) -> bool:
         return True
+
+    def gdo_dependencies(self) -> list:
+        return [
+            'classic',
+            'contact',
+            'irc',
+            'login',
+            'register',
+        ]
