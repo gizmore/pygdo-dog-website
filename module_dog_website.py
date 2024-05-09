@@ -11,9 +11,13 @@ class module_dog_website(GDO_Module):
 
     def gdo_dependencies(self) -> list:
         return [
+            'blackjack',
             'classic',
             'contact',
             'irc',
             'login',
+            'perf',
             'register',
+            'slapwarz',
+            'telegram',
         ]
