@@ -12,6 +12,7 @@ class module_dog_website(GDO_Module):
         return [
             'blackjack',
             'bootstrap5',
+            'bridge',
             'chatgpt4o',
             'contact',
             'discord',
