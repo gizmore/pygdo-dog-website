@@ -4,18 +4,18 @@ import unittest
 from gdo.base.Application import Application
 from gdo.base.ModuleLoader import ModuleLoader
 from gdo.base.Util import module_enabled
-from gdotest.TestUtil import reinstall_module
+from gdotest.TestUtil import reinstall_module, GDOTestCase
 
 
-class DogWebsiteTest(unittest.TestCase):
+class DogWebsiteTest(GDOTestCase):
 
     def setUp(self):
+        super().setUp()
         Application.init(os.path.dirname(__file__ + "/../../../../"))
         loader = ModuleLoader.instance()
         loader.load_modules_db(True)
         loader.init_modules(True, True)
         loader.init_cli()
-        return self
 
     def test_00_install(self):
         reinstall_module('dog_website')
